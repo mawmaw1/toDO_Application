@@ -51,6 +51,24 @@ public class Controller {
             dbf.updateEmployee(emp);
         }
     
+        
+        
+         public void saveProject(Project pro){
+           dbf.saveProject(pro);
+        }
+        
+        public List<Project> fetchProject(){
+           return  dbf.fetchProject();
+        }
+        
+         public Project fetchProjectById(int pro_id){
+           return  dbf.fetchProjectById(pro_id);
+        }
+	
+        
+        public void updateProject(Project pro){
+            dbf.updateProject(pro);
+        }
     
     
 }

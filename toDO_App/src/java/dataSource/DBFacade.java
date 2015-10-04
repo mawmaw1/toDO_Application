@@ -17,13 +17,14 @@ public class DBFacade {
 
     private Connection con;
     private employeeMapper empMap;
-
+    private ProjectMapper proMap;
     //== Singleton start
     private static DBFacade instance;
 
     private DBFacade() {
         
         empMap = new employeeMapper();
+        proMap = new ProjectMapper();
         con = DBConnector.getInstance().getConnection();
     }
 
@@ -51,5 +52,24 @@ public class DBFacade {
 
     public void updateEmployee(Employee emp) {
         empMap.updateEmployee(emp, con);
+    }
+    
+    
+    
+    
+        public void saveProject(Project pro) {
+        proMap.saveNewProject(pro, con);
+    }
+
+    public List<Project> fetchProject() {
+        return proMap.fetchProject(con);
+    }
+
+    public Project fetchProjectById(int pro_id) {
+        return proMap.fetchProjectById(pro_id, con);
+    }
+
+    public void updateProject(Project pro) {
+        proMap.updateProject(pro, con);
     }
 }
