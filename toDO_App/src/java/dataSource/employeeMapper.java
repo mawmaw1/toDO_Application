@@ -57,7 +57,7 @@ public class employeeMapper {
 
         int rowsUpdated = 0;
         String SQLString
-                = "update employee set emp_name = ?, emp_name = ?,emp_email = ?, emp_phone = ? where emp_id = ?";
+                = "update employee set emp_name = ?, emp_email = ?, emp_phone = ? where emp_id = ?";
         PreparedStatement statement = null;
 
         try {
@@ -67,7 +67,7 @@ public class employeeMapper {
             statement.setString(2, emp.getEmp_email());
             statement.setString(3, emp.getEmp_phone());
 
-            statement.setInt(5, emp.getEmp_id());
+            statement.setInt(4, emp.getEmp_id());
 
             rowsUpdated = statement.executeUpdate();
         } catch (Exception e) {
