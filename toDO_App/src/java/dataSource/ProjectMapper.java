@@ -19,7 +19,7 @@ import java.util.List;
  * @author Magnus
  */
 public class ProjectMapper {
-    
+
     public boolean saveNewProject(Project pro, Connection con) {
         int rowsInserted = 0;
         String SQLString
@@ -35,7 +35,6 @@ public class ProjectMapper {
             statement.setDate(3, pro.getPro_startdate());
             statement.setDate(4, pro.getPro_enddate());
             statement.setDouble(5, pro.getPro_budget());
-            
 
             rowsInserted = statement.executeUpdate();
         } catch (Exception e) {

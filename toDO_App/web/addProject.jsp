@@ -35,13 +35,13 @@
                     <td>Project Start Date</td>   <td><input type="text" name="pro_startdate"></td> 
                 </tr>
                 <tr>
-                    <td>Project End Date</td>   <td><input type="text"   name="emp_enddate"></td> 
+                    <td>Project End Date</td>   <td><input type="text"   name="pro_enddate"></td> 
                 </tr>
                 <tr>
-                    <td>Project Budget</td>   <td><input type="text"   name="emp_budget"></td>
+                    <td>Project Budget</td>   <td><input type="text"   name="pro_budget"></td>
                 </tr>
                 <tr>
-                    <td colspan="2" align="center"><button name="newProjectButton" value="" >Save</Button></td>                    
+                    <td colspan="2" align="center"><button name="newButton" value="" >Save</Button></td>                    
                 </tr>
             </table>
         </form>

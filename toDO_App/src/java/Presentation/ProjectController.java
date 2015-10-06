@@ -46,11 +46,9 @@ public class ProjectController extends HttpServlet {
             switch (command) {
                 case "addProject": {
                     Project pro = new Project();
-                    
                     pro.setPro_name(request.getParameter("pro_name"));
                     pro.setPro_startdate(java.sql.Date.valueOf(request.getParameter("pro_startdate")));
                     pro.setPro_enddate(java.sql.Date.valueOf(request.getParameter("pro_enddate")));
-
                     pro.setPro_budget(Double.parseDouble(request.getParameter("pro_budget")));
                     con.saveProject(pro);
                     response.sendRedirect("addProject.jsp?msg=Project saved Successfully");
